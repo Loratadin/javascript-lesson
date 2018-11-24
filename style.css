@@ -8,7 +8,7 @@ body {
 
 header {
   height: 100px;
-  background-color: lightblue;
+  background-color: #b6ddcc;
   text-align: center;
   padding-top: 20px;
   box-shadow: 3px 3px 3px #ccc;
@@ -17,7 +17,7 @@ header {
 header h1 {
   font-size: 40px;
   font-weight: bold;
-  color: dodgerblue;
+  color: #1fe38e;
   margin: 0;
 }
 
@@ -42,15 +42,15 @@ header h1 {
 #search button {
   font-family: inherit;
   font-size: inherit;
-  background-color: dodgerblue;
-  border: 1px solid dodgerblue;
+  background-color: #1fe38e;
+  border: 1px solid #1fe38e;
   border-radius: 3px;
   cursor: pointer;
   color: white;
 }
 
 #search button:hover {
-  background-color: deepskyblue;
+  background-color: #1fe38e;
 }
 
 #weather {
@@ -58,7 +58,7 @@ header h1 {
   border: 1px solid #ccc;
   width: 500px;
   margin: 100px auto auto;
-  background-color: deepskyblue;
+  background-color: #1fe38e;
   box-shadow: 2px 2px 3px #ccc;
   color: white;
   box-sizing: border-box;
