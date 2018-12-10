@@ -1,5 +1,8 @@
 searchButton.addEventListener('click', searchWeather);
-function searchWeather () {
+
+function searchWeather() {
+    loadingText.style.display = 'block';
+    weatherBox.style.display = 'none';
     var cityName = searchCity.value;
     if (cityName.trim().length == 0) {
         return alert("Please, enter a city name");
@@ -29,4 +32,5 @@ function updateWeather(data) {
     weatherTemperature.textContent = temperature;
 
     weatherBox.style.display = 'block';
+    loadingText.style.display = 'none';
 }
