@@ -14,9 +14,18 @@ function searchWeather () {
         if(http.readyState == XMLHttpRequest.DONE && http.status === 200) {
             var data = JSON.parse(http.responseText);
             temperature = data.main.temp.toFixed() + ' F.';
+            updateWeather(data);
         } else if(http.readyState === XMLHttpRequest.DONE) {
             alert("Something went wrong!");
         }
     };
     http.send();
+}
+
+function updateWeather(data) {
+    weatherCity.textContent = data.cityName;
+    weatherDescription.textContent = data.description;
+    weatherTemperature.textContent = data.temperature;
+
+    weatherBox.style.display = 'block';
 }
