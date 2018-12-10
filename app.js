@@ -14,6 +14,7 @@ function searchWeather () {
         if(http.readyState == XMLHttpRequest.DONE && http.status === 200) {
             var data = JSON.parse(http.responseText);
             temperature = data.main.temp.toFixed() + ' F.';
+            console.log(data);
             updateWeather(data);
         } else if(http.readyState === XMLHttpRequest.DONE) {
             alert("Something went wrong!");
@@ -23,9 +24,9 @@ function searchWeather () {
 }
 
 function updateWeather(data) {
-    weatherCity.textContent = data.cityName;
-    weatherDescription.textContent = data.description;
-    weatherTemperature.textContent = data.temperature;
+    weatherCity.textContent = data.name;
+    weatherDescription.textContent = data.weather[0].description;
+    weatherTemperature.textContent = temperature;
 
     weatherBox.style.display = 'block';
 }
